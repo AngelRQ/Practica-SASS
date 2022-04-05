@@ -1,0 +1,153 @@
+//INICIO VARIABLES COLORES
+$first-color: #000000;
+$second-color: #9E7474;
+$third-color: #D85A5A;
+$fourth-color: #FFFFFF;
+//FIN VARIABLES COLORES
+
+//INICIO VARIABLES TIPOGRAFIAS
+$fonts-weights: ("regular": 400, "medium": 500, "bold": 700);
+//FIN VARIABLES TIPOGRAFIAS
+
+//INICIO VARIABLES TEXTO
+$raleway: 'Raleway';
+$poppins: 'Poppins';
+$futura: 'Futura';
+//FIN VARIABLES TEXTO
+
+img
+{
+    width: 50%;
+    top:-3em;
+    margin-left: 40em;
+    position: absolute;
+    object-fit: contain;
+    max-height: 60em;
+}
+
+//INICIO CLASES
+
+//anidados
+.container
+{
+    margin: 4em;
+    h1
+    {
+        color: $first-color;
+        font-size: 3.250em;
+        font-family: $futura;
+        font-weight: 700;
+    }
+
+    h2 
+    {
+        font-family: $poppins;
+        color: $first-color;
+        font-weight: 700;
+        font-size: 4.188em;
+    }
+
+    h3 
+    {
+        font-family: $poppins;
+        font-size: 3.125em;
+        font-weight: 500;
+        color: $first-color;
+        margin-top: -1.4em;
+    }
+
+    p 
+    {
+        font-family: $raleway;
+        font-size: 1.375em;
+        font-weight: 400;
+        line-height: 2em;
+        color: $second-color;
+        margin-top: -1.4em;
+    }
+}
+
+.snack-time 
+{
+    font-family: $raleway;
+    font-size: 1.375em;
+    margin-top: 3em;
+
+    p:first-child {
+        font-weight: 700;
+        color: $first-color;
+        font-size: 1.375em;
+    }
+
+    p:nth-child(2) {
+        font-family: 400;
+        color: $second-color;
+        font-size: 1.375em;
+    }
+
+}
+
+.bottons 
+{
+    margin-top: 2.5em;
+
+    button
+    {
+        padding: 1em 3em;
+        font-family: $raleway;
+        font-size: 1.250em;
+        font-weight: 500;
+        border-radius: 2em;
+        background: $third-color;
+        border: none;
+        color: $fourth-color;
+        
+        &:hover 
+        {
+            cursor: pointer;
+        }
+    }
+
+    button:last-child 
+    {
+        box-shadow: 0em 0.5em 1em -1em $first-color;
+        background-color: white;
+        color: $third-color;
+        margin-left: 1.8em;
+    }
+}
+//anidados
+
+%arrow
+{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 10px 0px -14px 0px;
+    border-top: solid 5px;
+    border-right: solid 5px;
+    color: $third-color;
+    margin-left: 14em;
+}
+
+%line
+{
+    display: inline-block;
+    width: 150px;
+    height: 10px;
+    color: $third-color;
+    border-top: solid 5px;
+    margin-left: 169px;
+}
+
+.horizontal-line
+{
+    @extend %line;
+}
+
+.arrow-right
+{
+    @extend %arrow;
+    transform: rotate(45deg);
+}
+//FIN CLASES
